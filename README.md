@@ -89,7 +89,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 For any queries or suggestions, feel free to reach out:
 - GitHub: [@Akshat394](https://github.com/Akshat394)
-- Email: [Your Email]
+- Email: akshattrivedi394@gmail.com
 
 ---
 
