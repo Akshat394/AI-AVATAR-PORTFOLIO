@@ -1,0 +1,102 @@
+{
+  "name": "Akshat Trivedi",
+  "contact": {
+    "phone": "9119964903",
+    "email": "akshattrivedi394@gmail.com",
+    "location": "Kanpur, India",
+    "linkedin": "linkedin.com/in/akshat-trived1",
+    "github": "https://github.com/Akshat394"
+  },
+  "headline": "Hey there! I'm a passionate Python Developer currently pursuing my B.Tech in Information Technology with an impressive CGPA of 8.1. I love diving deep into data analysis and solving complex algorithmic challenges. My journey in tech has been exciting - I've worked extensively with Jupyter notebooks to create clear, well-documented analytical workflows. I've had the opportunity to work with fascinating datasets from Kaggle, US Government sources, and MNIST, turning raw data into meaningful insights that drive AI research forward. What really excites me is collaborating with remote teams across different functions - I pride myself on making technical concepts accessible to everyone.",
+  "education": {
+    "degree": "Bachelor of Technology in Information Technology",
+    "institution": "Pranveer Singh Institute of Technology, Kanpur, India",
+    "graduation_year_range": "2022-2026",
+    "cgpa": "8.1",
+    "relevant_coursework": [
+      "Data Structures & Algorithms",
+      "Operating Systems",
+      "Computer Networks",
+      "Machine Learning",
+      "Computer Vision"
+    ]
+  },
+  "skills": {
+    "languages_tools": "I'm fluent in Python 3.x and comfortable with C++, Java, JavaScript, Bash, SQL, Git, and Linux. Each of these tools helps me tackle different aspects of software development.",
+    "web_apis": "I've built robust web applications using Flask and REST APIs, and I love using Jupyter Notebooks to create clear, interactive documentation.",
+    "data_handling": "When it comes to data, I'm your go-to person. I work extensively with Pandas, NumPy, Scikit-learn, and Keras to transform complex data into actionable insights.",
+    "machine_learning": "My passion lies in machine learning. I've worked with TensorFlow and OpenCV to develop cutting-edge solutions, from basic ML models to complex computer vision applications.",
+    "cloud_devops": "I've got hands-on experience with AWS services like EC2, S3, and Lambda. I'm also familiar with Docker and have set up CI/CD pipelines using GitHub Actions.",
+    "data_visualization": "I bring data to life using Matplotlib and Seaborn, creating visualizations that tell compelling stories."
+  },
+  "experience": [
+    {
+      "company": "Outlier AI (Freelance)",
+      "role": "RLHF Code Specialist",
+      "duration": "2024 - Present",
+      "responsibilities": [
+        "I work closely with diverse remote teams to create scalable AI solutions that make a real impact",
+        "Using Python, I've automated machine learning pipelines and built powerful data-processing APIs",
+        "I take pride in creating clear documentation and training materials that help teams succeed",
+        "My experience with agile methodologies helps me bridge communication gaps across international teams"
+      ]
+    },
+    {
+      "company": "Institute of Electrical and Electronics Engineers PSIT Branch Kanpur, India",
+      "role": "Chairperson, IEEE PSIT Student Branch",
+      "duration": "2023 - Present",
+      "responsibilities": [
+        "I've organized engaging workshops on sensors, IoT, and AI/ML that have sparked innovation and collaboration",
+        "I mentor students in Python scripting and help them develop strong technical documentation skills",
+        "I've built a vibrant research community that celebrates innovation and inclusivity"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Air CTRL - A SOTA Hand Gesture Recognition System",
+      "duration": "Apr 2023 – Sept 2023",
+      "technologies": ["Python", "TensorFlow", "Convolutional Neural Network", "Flask", "MediaPipe", "OpenCV"],
+      "description": "I created an exciting real-time hand gesture recognition app that responds instantly to user movements. Using CNNs, MediaPipe, and OpenCV, I built a system that feels natural and responsive. I implemented the inference API in Flask and automated the training pipeline with Bash on Linux. Throughout the project, I used Jupyter notebooks to track experiments and document the development process."
+    },
+    {
+      "name": "Deepfake Detection & Recognition System",
+      "duration": "Oct 2023 – Feb 2024",
+      "technologies": ["Python", "TensorFlow", "AWS", "Flask", "Jupyter", "Docker", "DFDC Dataset", "VGG16 Datasets"],
+      "description": "I developed an innovative hybrid Deepfake detection system that's currently patent-pending. What makes it special is a novel ASCII-based preprocessing technique that reduced computational load by an impressive 65%. I trained the model on extensive datasets from Kaggle, DFDC, and VGG16, then deployed it using Flask on AWS EC2 with Docker. The system uses Lambda for scalable inference and S3 for video data management. I've documented everything in Jupyter notebooks to ensure reproducibility and clarity."
+    },
+    {
+      "name": "FairPlay - An Anti-Doping Education App",
+      "duration": "May 2024 – Oct 2024",
+      "technologies": ["React Native", "Node.js", "MongoDB", "RESTful APIs"],
+      "description": "I built a full-stack mobile application that makes anti-doping education engaging and accessible. Using React.js for the front end and Node.js/Express.js for the backend, I created a platform with personalized dashboards and real-time messaging. The app features a gamified experience with chat functionality, all built on a secure and scalable architecture that ensures smooth performance."
+    }
+  ],
+  "certifications": [
+    {
+      "name": "Machine Learning Course",
+      "issuer": "Rinex Technologies",
+      "duration": "Jun 2024 – Sept 2024"
+    },
+    {
+      "name": "AWS Certified Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "duration": "Dec 2024 – Jan 2025"
+    },
+    {
+      "name": "Certified Java Developer – Expert",
+      "issuer": "CJDETM",
+      "duration": "Feb 2025 – Mar 2025"
+    }
+  ],
+  "additional_highlights": [
+    "I'm an active contributor to Python-based automation and ML utilities, regularly participating in open-source communities on Hugging Face and TensorFlow GitHub repositories",
+    "I excel at remote collaboration, using tools like Git, Jupyter, and Notion to maintain clear communication and documentation"
+  ],
+  "portfolio_goals": [
+    "I'm excited to explore new opportunities in the tech industry",
+    "I want to showcase my passion for AI and ML through my projects",
+    "I'm building my personal brand as a tech innovator",
+    "I'm always looking to connect with like-minded professionals"
+  ]
+} 
