@@ -15,18 +15,14 @@ const App = () => {
         </div>
         
         {/* Computer Model Section */}
-        <div className="relative">
-          <ComputersCanvas />
-        </div>
+        <ComputersCanvas />
         
         {/* Content Sections */}
-        <div className="relative z-10">
-          <About />
-          <Experience />
-          <Tech />
-          <Works />
-          <Feedbacks />
-        </div>
+        <About />
+        <Experience />
+        <Tech />
+        <Works />
+        <Feedbacks />
         
         {/* Contact & Footer */}
         <div className='relative z-0'>

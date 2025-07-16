@@ -124,7 +124,7 @@ const About = () => {
   }, []);
 
   return (
-    <div className="relative flex justify-center items-center min-h-[600px] py-12 px-4 sm:px-8 overflow-hidden mt-32">
+    <div className="relative flex justify-center items-center min-h-[600px] py-12 px-4 sm:px-8 overflow-hidden">
       {/* Futuristic Animated Background */}
       <div className="absolute inset-0 z-0">
         <div className="absolute inset-0 bg-gradient-to-br from-[#0a0a0a] via-[#1a1a2e] to-[#16213e] opacity-90" />

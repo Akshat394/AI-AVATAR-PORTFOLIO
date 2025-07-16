@@ -67,8 +67,8 @@ const Computers = () => {
       <Environment preset="city" />
       <primitive
         object={computer.scene}
-        scale={0.75}
-        position={[0, -3.25, -1.5]}
+        scale={1.2}
+        position={[0, -2.5, -1.5]}
         rotation={[-0.01, -0.2, -0.1]}
       />
     </>
@@ -98,35 +98,28 @@ const ComputersCanvas = () => {
   }
 
   return (
-    <section className="relative w-full h-[60vh] bg-gradient-to-b from-primary via-primary/95 to-secondary/5 overflow-hidden">
-      {/* Subtle background pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-dots-pattern"></div>
-      </div>
-      
-      <div className="absolute inset-0 flex items-center justify-center">
-        <Canvas
-          frameloop="demand"
-          shadows
-          dpr={[1, 2]}
-          camera={{ position: [20, 3, 5], fov: 25 }}
-          gl={{ preserveDrawingBuffer: true, outputEncoding: THREE.sRGBEncoding }}
-          className="w-full h-full"
-        >
-          <Suspense fallback={<CanvasLoader />}>
-            <OrbitControls
-              enableZoom={false}
-              maxPolarAngle={Math.PI / 2}
-              minPolarAngle={Math.PI / 2}
-              autoRotate={true}
-              autoRotateSpeed={2}
-            />
-            <Computers />
-          </Suspense>
-          <Preload all />
-        </Canvas>
-      </div>
-    </section>
+    <div className="relative w-full h-[80vh]">
+      <Canvas
+        frameloop="demand"
+        shadows
+        dpr={[1, 2]}
+        camera={{ position: [20, 3, 5], fov: 25 }}
+        gl={{ preserveDrawingBuffer: true, outputEncoding: THREE.sRGBEncoding }}
+        className="w-full h-full"
+      >
+        <Suspense fallback={<CanvasLoader />}>
+          <OrbitControls
+            enableZoom={false}
+            maxPolarAngle={Math.PI / 2}
+            minPolarAngle={Math.PI / 2}
+            autoRotate={true}
+            autoRotateSpeed={2}
+          />
+          <Computers />
+        </Suspense>
+        <Preload all />
+      </Canvas>
+    </div>
   );
 };
 
