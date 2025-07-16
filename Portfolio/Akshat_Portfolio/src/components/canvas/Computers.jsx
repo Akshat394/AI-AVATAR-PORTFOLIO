@@ -92,38 +92,41 @@ const ComputersCanvas = () => {
     };
   }, []);
 
+  // Don't render on mobile screens
+  if (isMobile) {
+    return null;
+  }
+
   return (
-    !isMobile && ( // Hide on mobile screens
-      <section className="relative w-full h-[60vh] bg-gradient-to-b from-primary via-primary/95 to-secondary/5 overflow-hidden">
-        {/* Subtle background pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%239C92AC" fill-opacity="0.1"%3E%3Ccircle cx="30" cy="30" r="2"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')]"></div>
-        </div>
-        
-        <div className="absolute inset-0 flex items-center justify-center">
-          <Canvas
-            frameloop="demand"
-            shadows
-            dpr={[1, 2]}
-            camera={{ position: [20, 3, 5], fov: 25 }}
-            gl={{ preserveDrawingBuffer: true, outputEncoding: THREE.sRGBEncoding }}
-            className="w-full h-full"
-          >
-            <Suspense fallback={<CanvasLoader />}>
-              <OrbitControls
-                enableZoom={false}
-                maxPolarAngle={Math.PI / 2}
-                minPolarAngle={Math.PI / 2}
-                autoRotate={true}
-                autoRotateSpeed={2}
-              />
-              <Computers />
-            </Suspense>
-            <Preload all />
-          </Canvas>
-        </div>
-      </section>
-    )
+    <section className="relative w-full h-[60vh] bg-gradient-to-b from-primary via-primary/95 to-secondary/5 overflow-hidden">
+      {/* Subtle background pattern */}
+      <div className="absolute inset-0 opacity-10">
+        <div className="absolute inset-0 bg-dots-pattern"></div>
+      </div>
+      
+      <div className="absolute inset-0 flex items-center justify-center">
+        <Canvas
+          frameloop="demand"
+          shadows
+          dpr={[1, 2]}
+          camera={{ position: [20, 3, 5], fov: 25 }}
+          gl={{ preserveDrawingBuffer: true, outputEncoding: THREE.sRGBEncoding }}
+          className="w-full h-full"
+        >
+          <Suspense fallback={<CanvasLoader />}>
+            <OrbitControls
+              enableZoom={false}
+              maxPolarAngle={Math.PI / 2}
+              minPolarAngle={Math.PI / 2}
+              autoRotate={true}
+              autoRotateSpeed={2}
+            />
+            <Computers />
+          </Suspense>
+          <Preload all />
+        </Canvas>
+      </div>
+    </section>
   );
 };
 
