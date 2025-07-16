@@ -94,25 +94,27 @@ const ComputersCanvas = () => {
 
   return (
     !isMobile && ( // Hide on mobile screens
-      <Canvas
-        frameloop="demand"
-        shadows
-        dpr={[1, 2]}
-        camera={{ position: [20, 3, 5], fov: 25 }}
-        gl={{ preserveDrawingBuffer: true, outputEncoding: THREE.sRGBEncoding }}
-      >
-        <Suspense fallback={<CanvasLoader />}>
-          <OrbitControls
-            enableZoom={false}
-            maxPolarAngle={Math.PI / 2}
-            minPolarAngle={Math.PI / 2}
-            autoRotate={true}
-            autoRotateSpeed={2}
-          />
-          <Computers />
-        </Suspense>
-        <Preload all />
-      </Canvas>
+      <section className="relative w-full h-screen">
+        <Canvas
+          frameloop="demand"
+          shadows
+          dpr={[1, 2]}
+          camera={{ position: [20, 3, 5], fov: 25 }}
+          gl={{ preserveDrawingBuffer: true, outputEncoding: THREE.sRGBEncoding }}
+        >
+          <Suspense fallback={<CanvasLoader />}>
+            <OrbitControls
+              enableZoom={false}
+              maxPolarAngle={Math.PI / 2}
+              minPolarAngle={Math.PI / 2}
+              autoRotate={true}
+              autoRotateSpeed={2}
+            />
+            <Computers />
+          </Suspense>
+          <Preload all />
+        </Canvas>
+      </section>
     )
   );
 };

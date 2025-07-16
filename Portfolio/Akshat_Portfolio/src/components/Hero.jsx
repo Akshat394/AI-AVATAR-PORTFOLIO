@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 
 import { styles } from "../styles";
-import { ComputersCanvas } from "./canvas";
 
 const Hero = () => {
 
@@ -21,15 +20,13 @@ const Hero = () => {
             Hey there! I'm <span className='text-[#915EFF]'>Akshat Trivedi</span>
           </h1>
           <p className={`${styles.heroSubText} mt-2 text-white-100`}>
-            B.Tech IT ’26 | Software Engineer | Full Stack & AI/ML Enthusiast | Research-Driven Builder of Scalable Tech
+            B.Tech IT '26 | Software Engineer | Full Stack & AI/ML Enthusiast | Research-Driven Builder of Scalable Tech
           </p>
           <p className="mt-2 text-secondary text-lg max-w-2xl">
             Bridging software engineering, full stack development, and AI/ML research to deliver intelligent, scalable solutions.
           </p>
         </div>
       </div>
-
-      <ComputersCanvas />
 
       
 
