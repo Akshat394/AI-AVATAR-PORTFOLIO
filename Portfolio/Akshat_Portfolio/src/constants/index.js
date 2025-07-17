@@ -109,10 +109,10 @@ const technologies = [
 const experiences = [
   {
     title: "Software Developer Intern",
-    company_name: "The Vibe Coder",
+    company_name: "The Vibe Coder (Startup)",
     icon: backend,
     iconBg: "#383E56",
-    date: "2024",
+    date: "2025-Present",
     points: [
       "Developed Facebook Social Analyzer: Engineered a Python tool for analyzing and visualizing Facebook social graphs, providing actionable insights for research and analytics.",
       "Built Studio AI: Created a TypeScript web app for AI-driven content creation and design automation, streamlining creative workflows with generative AI tools.",
@@ -125,7 +125,7 @@ const experiences = [
     company_name: "Outlier AI",
     icon: creator,
     iconBg: "#383E56",
-    date: "2024",
+    date: "2024-2025",
     points: [
       "Specialized in Reinforcement Learning from Human Feedback (RLHF) for code generation and evaluation tasks.",
       "Designed and implemented RLHF pipelines to improve LLM-based code assistants, focusing on prompt engineering, reward modeling, and human-in-the-loop evaluation.",
@@ -135,7 +135,7 @@ const experiences = [
   },
   {
     title: "Chairperson & Research Associate",
-    company_name: "IEEE SB",
+    company_name: "IEEE PSIT (Student Branch)",
     icon: web,
     iconBg: "#383E56",
     date: "2023",
