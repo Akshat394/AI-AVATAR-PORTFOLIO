@@ -108,43 +108,42 @@ const technologies = [
 
 const experiences = [
   {
-    title: "The vibe Coder",
-    company_name: "The vibe Coder",
+    title: "Software Developer Intern",
+    company_name: "The Vibe Coder",
     icon: backend,
     iconBg: "#383E56",
-    date: "2025",
+    date: "2024",
     points: [
-      "AI Research & Development Lead: Architected and prototyped a non‑lethal RF‑based Active Denial System operating at 90 GHz for UAV and mobile deployment.",
-      "Integrated real‑time Human‑Machine Interface (HMI) with power‑level monitoring and radar‑based target detection.",
-      "Demonstrated end‑to‑end beam‑steering control using Python, C++, and embedded firmware on custom hardware."
+      "Developed Facebook Social Analyzer: Engineered a Python tool for analyzing and visualizing Facebook social graphs, providing actionable insights for research and analytics.",
+      "Built Studio AI: Created a TypeScript web app for AI-driven content creation and design automation, streamlining creative workflows with generative AI tools.",
+      "Implemented Mercari Scraper: Developed a Python-based shopping assistant for Mercari Japan, featuring intelligent product recommendations and automated web scraping.",
+      "Collaborated with cross-functional teams to deliver robust, production-ready solutions and contributed to code reviews and documentation."
     ],
   },
   {
-    title: "Outlier.ai",
-    company_name: "Outlier.ai",
+    title: "RLHF Code Specialist (Freelance)",
+    company_name: "Outlier AI",
     icon: creator,
     iconBg: "#383E56",
-    date: "2025",
+    date: "2024",
     points: [
-      "Full‑Stack Intern / Developer: Designed and implemented a community‑driven book exchange platform using Next.js, React, Node.js, and MongoDB.",
-      "Built responsive dashboard UI with Tailwind CSS, RESTful APIs for book listing, and mock authentication flows.",
-      "Optimized search and filtering for real‑time discovery and secure transactional flows.",
-      "Big Data Platform Engineer: Developed a real‑time urban insights platform leveraging Hadoop/HDFS, Spark, Scala, Hive, and Pig for massive data processing.",
-      "Implemented streaming analytics pipelines and interactive dashboards for city‑wide sensor networks.",
-      "Collaborated on cluster provisioning, performance tuning, and end‑to‑end data ingestion workflows."
+      "Specialized in Reinforcement Learning from Human Feedback (RLHF) for code generation and evaluation tasks.",
+      "Designed and implemented RLHF pipelines to improve LLM-based code assistants, focusing on prompt engineering, reward modeling, and human-in-the-loop evaluation.",
+      "Collaborated with research and engineering teams to deploy scalable solutions for code quality and safety.",
+      "Delivered technical documentation and best practices for RLHF workflows in production environments."
     ],
   },
   {
-    title: "IEEE",
-    company_name: "IEEE",
+    title: "Chairperson & Research Associate",
+    company_name: "IEEE SB",
     icon: web,
     iconBg: "#383E56",
-    date: "2025",
+    date: "2023",
     points: [
-      "AI/ML Engineer: Led development of Resume GPT and FairPlay – Generative AI Projects integrating OpenAI API, LangChain, and TensorFlow.",
-      "Workflow Automation Developer: Built an n8n orchestration workflow for automated video transcript extraction, SEO title/description/tag generation, and metadata updating.",
-      "Team Lead & Presenter: Co‑led the development of an AI‑powered retail supply chain solution for Walmart Sparkathon, featuring ML forecasting, autonomous logistics, digital twin simulation, and sustainability metrics.",
-      "Embedded Systems Creator: Engineered an interactive Arduino‑based replica of the Squid Game doll using servos, ultrasonic sensors, audio modules, and real‑time control logic."
+      "Led the IEEE Student Branch as Chairperson, overseeing research, events, and technical initiatives.",
+      "Developed Deepfake Detector: Built a Python-based dual-path video forgery detection system using advanced deep learning models for high-accuracy detection.",
+      "Engineered Squid Game Doll Embedded Real-Time Motion Detection System: Created an Arduino-based interactive replica with real-time control logic and embedded systems integration.",
+      "Conducted research, mentored junior members, and presented findings at national and international conferences."
     ],
   },
 ];
