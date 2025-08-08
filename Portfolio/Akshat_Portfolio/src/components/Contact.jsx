@@ -164,19 +164,6 @@ const Contact = () => {
             </div>
           )}
 
-          {/* EmailJS Setup Instructions */}
-          <div className="mt-6 p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
-            <p className="text-blue-400 text-sm font-medium mb-2">📧 Email Setup Required:</p>
-            <p className="text-gray-400 text-xs">
-              To enable email functionality, you need to:
-            </p>
-            <ol className="text-gray-400 text-xs mt-2 list-decimal list-inside space-y-1">
-              <li>Sign up at <a href="https://www.emailjs.com" target="_blank" rel="noopener" className="text-blue-400 hover:underline">EmailJS.com</a></li>
-              <li>Create an email service (Gmail, Outlook, etc.)</li>
-              <li>Create an email template</li>
-              <li>Update the .env file with your EmailJS credentials</li>
-            </ol>
-          </div>
         </form>
       </motion.div>
 
