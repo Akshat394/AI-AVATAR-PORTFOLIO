@@ -93,7 +93,6 @@ const App = () => {
           id="background-audio"
         >
           <source src="/Tuyo_Narcos_Theme_Song-648780-mobiles24.mp3" type="audio/mpeg" />
-          <source src="./Tuyo_Narcos_Theme_Song-648780-mobiles24.mp3" type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
 
