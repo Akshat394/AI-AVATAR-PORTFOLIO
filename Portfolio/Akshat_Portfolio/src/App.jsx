@@ -8,14 +8,16 @@ import Footer from "./components/Footer";
 const App = () => {
   const audioRef = useRef(null);
   const [audioLoaded, setAudioLoaded] = useState(false);
+  const [audioError, setAudioError] = useState(null);
 
   useEffect(() => {
     // Function to start audio
     const startAudio = () => {
-      if (audioRef.current && audioLoaded) {
+      if (audioRef.current && audioLoaded && !audioError) {
         audioRef.current.volume = 0.3;
         audioRef.current.play().catch(error => {
           console.log("Audio play failed:", error);
+          setAudioError(error);
         });
       }
     };
@@ -23,6 +25,7 @@ const App = () => {
     // Function to handle audio loading
     const handleAudioLoad = () => {
       setAudioLoaded(true);
+      setAudioError(null);
       console.log("Audio loaded successfully");
       
       // Try to start audio after loading
@@ -34,11 +37,20 @@ const App = () => {
     // Function to handle audio errors
     const handleAudioError = (error) => {
       console.error("Audio error:", error);
+      setAudioError(error);
+      setAudioLoaded(false);
+    };
+
+    // Function to handle audio can play
+    const handleCanPlay = () => {
+      console.log("Audio can play");
+      setAudioLoaded(true);
     };
 
     // Add event listeners to audio element
     if (audioRef.current) {
       audioRef.current.addEventListener('loadeddata', handleAudioLoad);
+      audioRef.current.addEventListener('canplay', handleCanPlay);
       audioRef.current.addEventListener('error', handleAudioError);
       
       // Set initial volume
@@ -49,6 +61,7 @@ const App = () => {
       if (playPromise !== undefined) {
         playPromise.catch(error => {
           console.log("Autoplay prevented by browser:", error);
+          setAudioError(error);
           // Add click event listener to start audio on first user interaction
           document.addEventListener('click', startAudio, { once: true });
         });
@@ -59,11 +72,12 @@ const App = () => {
     return () => {
       if (audioRef.current) {
         audioRef.current.removeEventListener('loadeddata', handleAudioLoad);
+        audioRef.current.removeEventListener('canplay', handleCanPlay);
         audioRef.current.removeEventListener('error', handleAudioError);
       }
       document.removeEventListener('click', startAudio);
     };
-  }, [audioLoaded]);
+  }, [audioLoaded, audioError]);
 
   return (
     <BrowserRouter>
@@ -76,9 +90,10 @@ const App = () => {
           preload="auto"
           className="hidden"
           controls={false}
+          id="background-audio"
         >
-          <source src="./Tuyo_Narcos_Theme_Song-648780-mobiles24.mp3" type="audio/mpeg" />
           <source src="/Tuyo_Narcos_Theme_Song-648780-mobiles24.mp3" type="audio/mpeg" />
+          <source src="./Tuyo_Narcos_Theme_Song-648780-mobiles24.mp3" type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
 

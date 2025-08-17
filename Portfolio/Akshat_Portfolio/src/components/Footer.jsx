@@ -7,44 +7,110 @@ const Footer = () => {
   const [volume, setVolume] = useState(0.3);
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [audioReady, setAudioReady] = useState(false);
   const audioRef = useRef(null);
 
   useEffect(() => {
-    // Get the audio element from the parent App component
-    audioRef.current = document.querySelector('audio');
-    
-    if (audioRef.current) {
-      // Set initial volume
-      audioRef.current.volume = volume;
+    // Function to initialize audio
+    const initializeAudio = () => {
+      // Try to get audio element by ID first, then by querySelector
+      let audioElement = document.getElementById('background-audio');
+      if (!audioElement) {
+        audioElement = document.querySelector('audio');
+      }
       
-      // Add event listeners
-      audioRef.current.addEventListener('play', () => setIsPlaying(true));
-      audioRef.current.addEventListener('pause', () => setIsPlaying(false));
-      audioRef.current.addEventListener('timeupdate', () => {
-        setCurrentTime(audioRef.current.currentTime);
-      });
-      audioRef.current.addEventListener('loadedmetadata', () => {
-        setDuration(audioRef.current.duration);
-      });
-      audioRef.current.addEventListener('volumechange', () => {
-        setVolume(audioRef.current.volume);
+      if (audioElement) {
+        audioRef.current = audioElement;
+        setAudioReady(true);
+        
+        // Set initial volume
+        audioRef.current.volume = volume;
+        
+        // Add event listeners
+        const handlePlay = () => {
+          console.log("Audio started playing");
+          setIsPlaying(true);
+        };
+        
+        const handlePause = () => {
+          console.log("Audio paused");
+          setIsPlaying(false);
+        };
+        
+        const handleTimeUpdate = () => {
+          setCurrentTime(audioRef.current.currentTime);
+        };
+        
+        const handleLoadedMetadata = () => {
+          console.log("Audio metadata loaded, duration:", audioRef.current.duration);
+          setDuration(audioRef.current.duration);
+        };
+        
+        const handleVolumeChange = () => {
+          setVolume(audioRef.current.volume);
+          setIsMuted(audioRef.current.muted);
+        };
+        
+        const handleCanPlay = () => {
+          console.log("Audio can play");
+          setAudioReady(true);
+        };
+        
+        // Add event listeners
+        audioRef.current.addEventListener('play', handlePlay);
+        audioRef.current.addEventListener('pause', handlePause);
+        audioRef.current.addEventListener('timeupdate', handleTimeUpdate);
+        audioRef.current.addEventListener('loadedmetadata', handleLoadedMetadata);
+        audioRef.current.addEventListener('volumechange', handleVolumeChange);
+        audioRef.current.addEventListener('canplay', handleCanPlay);
+        
+        // Set initial state
+        setIsPlaying(!audioRef.current.paused);
         setIsMuted(audioRef.current.muted);
-      });
-    }
+        setVolume(audioRef.current.volume);
+        setCurrentTime(audioRef.current.currentTime);
+        setDuration(audioRef.current.duration || 0);
+        
+        // Cleanup function
+        return () => {
+          if (audioRef.current) {
+            audioRef.current.removeEventListener('play', handlePlay);
+            audioRef.current.removeEventListener('pause', handlePause);
+            audioRef.current.removeEventListener('timeupdate', handleTimeUpdate);
+            audioRef.current.removeEventListener('loadedmetadata', handleLoadedMetadata);
+            audioRef.current.removeEventListener('volumechange', handleVolumeChange);
+            audioRef.current.removeEventListener('canplay', handleCanPlay);
+          }
+        };
+      } else {
+        console.log("Audio element not found, retrying...");
+        // Retry after a short delay
+        setTimeout(initializeAudio, 500);
+      }
+    };
+
+    // Initialize audio
+    initializeAudio();
   }, []);
 
   const togglePlayPause = () => {
-    if (audioRef.current) {
+    if (audioRef.current && audioReady) {
+      console.log("Toggling play/pause, current state:", isPlaying);
       if (isPlaying) {
         audioRef.current.pause();
       } else {
-        audioRef.current.play();
+        audioRef.current.play().catch(error => {
+          console.error("Failed to play audio:", error);
+        });
       }
+    } else {
+      console.log("Audio not ready or not found");
     }
   };
 
   const toggleMute = () => {
-    if (audioRef.current) {
+    if (audioRef.current && audioReady) {
+      console.log("Toggling mute, current state:", isMuted);
       audioRef.current.muted = !isMuted;
     }
   };
@@ -52,7 +118,7 @@ const Footer = () => {
   const handleVolumeChange = (e) => {
     const newVolume = parseFloat(e.target.value);
     setVolume(newVolume);
-    if (audioRef.current) {
+    if (audioRef.current && audioReady) {
       audioRef.current.volume = newVolume;
       audioRef.current.muted = false; // Unmute when volume is adjusted
       setIsMuted(false);
@@ -60,18 +126,18 @@ const Footer = () => {
   };
 
   const handleSeek = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const clickX = e.clientX - rect.left;
-    const width = rect.width;
-    const seekTime = (clickX / width) * duration;
-    
-    if (audioRef.current) {
+    if (audioRef.current && audioReady && duration > 0) {
+      const rect = e.currentTarget.getBoundingClientRect();
+      const clickX = e.clientX - rect.left;
+      const width = rect.width;
+      const seekTime = (clickX / width) * duration;
+      
       audioRef.current.currentTime = seekTime;
     }
   };
 
   const formatTime = (time) => {
-    if (isNaN(time)) return "0:00";
+    if (isNaN(time) || time === 0) return "0:00";
     const minutes = Math.floor(time / 60);
     const seconds = Math.floor(time % 60);
     return `${minutes}:${seconds.toString().padStart(2, '0')}`;
@@ -79,6 +145,7 @@ const Footer = () => {
 
   const debugAudio = () => {
     if (audioRef.current) {
+      console.log("=== AUDIO DEBUG INFO ===");
       console.log("Audio element:", audioRef.current);
       console.log("Audio readyState:", audioRef.current.readyState);
       console.log("Audio paused:", audioRef.current.paused);
@@ -86,6 +153,13 @@ const Footer = () => {
       console.log("Audio volume:", audioRef.current.volume);
       console.log("Audio currentSrc:", audioRef.current.currentSrc);
       console.log("Audio error:", audioRef.current.error);
+      console.log("Audio duration:", audioRef.current.duration);
+      console.log("Audio currentTime:", audioRef.current.currentTime);
+      console.log("Component state - isPlaying:", isPlaying);
+      console.log("Component state - isMuted:", isMuted);
+      console.log("Component state - volume:", volume);
+      console.log("Component state - audioReady:", audioReady);
+      console.log("==========================");
       
       // Try to force play
       audioRef.current.play().then(() => {
@@ -107,6 +181,13 @@ const Footer = () => {
           <div className="text-center mb-3">
             <h3 className="text-sm font-semibold text-white">Tuyo Narcos Theme</h3>
             <p className="text-xs text-white/70">Background Music</p>
+            {/* Audio Status Indicator */}
+            <div className="flex items-center justify-center gap-2 mt-1">
+              <div className={`w-2 h-2 rounded-full ${audioReady ? 'bg-green-400' : 'bg-yellow-400'} animate-pulse`}></div>
+              <span className="text-xs text-white/60">
+                {audioReady ? 'Audio Ready' : 'Loading Audio...'}
+              </span>
+            </div>
           </div>
 
           {/* Progress Bar */}
