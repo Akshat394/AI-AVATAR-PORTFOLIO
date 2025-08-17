@@ -49,6 +49,27 @@ const Footer = () => {
     }
   };
 
+  const debugAudio = () => {
+    if (audioRef.current) {
+      console.log("Audio element:", audioRef.current);
+      console.log("Audio readyState:", audioRef.current.readyState);
+      console.log("Audio paused:", audioRef.current.paused);
+      console.log("Audio muted:", audioRef.current.muted);
+      console.log("Audio volume:", audioRef.current.volume);
+      console.log("Audio currentSrc:", audioRef.current.currentSrc);
+      console.log("Audio error:", audioRef.current.error);
+      
+      // Try to force play
+      audioRef.current.play().then(() => {
+        console.log("Audio started successfully");
+      }).catch(error => {
+        console.error("Audio play failed:", error);
+      });
+    } else {
+      console.log("Audio element not found");
+    }
+  };
+
   return (
     <footer className="w-full py-4 bg-black-100/55 text-white">
       <div className="flex flex-col items-center gap-4">
@@ -80,6 +101,15 @@ const Footer = () => {
             className="w-20 h-2 bg-gray-600 rounded-lg appearance-none cursor-pointer slider"
             title="Volume"
           />
+
+          {/* Debug Button */}
+          <button
+            onClick={debugAudio}
+            className="text-white hover:text-yellow-400 transition-colors px-2 py-1 rounded text-xs bg-yellow-600/20"
+            title="Debug Audio"
+          >
+            🐛
+          </button>
         </div>
 
         {/* Social Links */}

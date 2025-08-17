@@ -1,5 +1,5 @@
 import { BrowserRouter } from "react-router-dom";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import { About, Contact, Experience, Feedbacks, Hero, Navbar, Tech, Works, StarsCanvas } from "./components";
 import { ComputersCanvas } from "./components/canvas";
@@ -7,28 +7,63 @@ import Footer from "./components/Footer";
 
 const App = () => {
   const audioRef = useRef(null);
+  const [audioLoaded, setAudioLoaded] = useState(false);
 
   useEffect(() => {
-    // Attempt to autoplay the audio when component mounts
+    // Function to start audio
+    const startAudio = () => {
+      if (audioRef.current && audioLoaded) {
+        audioRef.current.volume = 0.3;
+        audioRef.current.play().catch(error => {
+          console.log("Audio play failed:", error);
+        });
+      }
+    };
+
+    // Function to handle audio loading
+    const handleAudioLoad = () => {
+      setAudioLoaded(true);
+      console.log("Audio loaded successfully");
+      
+      // Try to start audio after loading
+      setTimeout(() => {
+        startAudio();
+      }, 100);
+    };
+
+    // Function to handle audio errors
+    const handleAudioError = (error) => {
+      console.error("Audio error:", error);
+    };
+
+    // Add event listeners to audio element
     if (audioRef.current) {
-      audioRef.current.volume = 0.3; // Set volume to 30%
+      audioRef.current.addEventListener('loadeddata', handleAudioLoad);
+      audioRef.current.addEventListener('error', handleAudioError);
       
-      // Try to autoplay (may be blocked by browser policies)
+      // Set initial volume
+      audioRef.current.volume = 0.3;
+      
+      // Try to autoplay
       const playPromise = audioRef.current.play();
-      
       if (playPromise !== undefined) {
         playPromise.catch(error => {
           console.log("Autoplay prevented by browser:", error);
-          // Add a click event listener to start audio on first user interaction
-          const startAudio = () => {
-            audioRef.current.play();
-            document.removeEventListener('click', startAudio);
-          };
-          document.addEventListener('click', startAudio);
+          // Add click event listener to start audio on first user interaction
+          document.addEventListener('click', startAudio, { once: true });
         });
       }
     }
-  }, []);
+
+    // Cleanup function
+    return () => {
+      if (audioRef.current) {
+        audioRef.current.removeEventListener('loadeddata', handleAudioLoad);
+        audioRef.current.removeEventListener('error', handleAudioError);
+      }
+      document.removeEventListener('click', startAudio);
+    };
+  }, [audioLoaded]);
 
   return (
     <BrowserRouter>
@@ -40,7 +75,9 @@ const App = () => {
           loop
           preload="auto"
           className="hidden"
+          controls={false}
         >
+          <source src="./Tuyo_Narcos_Theme_Song-648780-mobiles24.mp3" type="audio/mpeg" />
           <source src="/Tuyo_Narcos_Theme_Song-648780-mobiles24.mp3" type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
