@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
-import { FaInstagram, FaXTwitter, FaLinkedin, FaPlay, FaPause, FaVolumeUp, FaVolumeMute } from "react-icons/fa6";
+import { FaInstagram, FaXTwitter, FaLinkedin, FaPlay, FaPause, FaVolumeUp, FaVolumeXmark } from "react-icons/fa6";
 
 const Footer = () => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -67,7 +67,7 @@ const Footer = () => {
             className="text-white hover:text-blue-400 transition-colors"
             title={isMuted ? "Unmute" : "Mute"}
           >
-            {isMuted ? <FaVolumeMute size={20} /> : <FaVolumeUp size={20} />}
+            {isMuted ? <FaVolumeXmark size={20} /> : <FaVolumeUp size={20} />}
           </button>
           
           <input
