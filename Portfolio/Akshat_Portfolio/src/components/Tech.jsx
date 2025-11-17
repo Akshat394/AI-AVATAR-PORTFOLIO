@@ -41,7 +41,7 @@ const Tech = () => (
     <h2 className="text-4xl font-bold text-center mb-6">Skills</h2>
     <p align="center">
       <img
-        src="https://skillicons.dev/icons?i=python,js,typescript,c,cpp,scala,java,html,css,react,nextjs,tailwind,arduino,tensorflow,mongodb,kafka,docker,githubactions,aws,postgresql,sqlite,mysql,linux,vscode,git,postman,jira,confluence&theme=light&perline=10&size=96"
+        src="https://skillicons.dev/icons?i=python,js,typescript,c,cpp,scala,java,html,css,react,nextjs,tailwind,android,opencv,opengl,cmake,gradle,arduino,tensorflow,mongodb,kafka,docker,githubactions,aws,postgresql,sqlite,mysql,linux,vscode,git,postman,jira,confluence&theme=light&perline=10&size=96"
         alt="Skill Icons"
         style={floatStyle}
       />
