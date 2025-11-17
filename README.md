@@ -27,9 +27,9 @@ Experience the next generation of portfolio presentation with our AI-powered 3D 
 - **AI Integration**: Custom AI models for natural interaction
 - **Animation System**: Advanced keyframe-based animations
 
-## 🎮 Live Demo
+## 🎮 Portfolio
 
-[Experience the Demo](https://your-demo-link.com)
+[Akshat's Portfolio](https://ai-avatar-portfolio-six.vercel.app/)
 
 ## 🚀 Getting Started
 
