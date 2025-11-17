@@ -279,7 +279,7 @@ const projects = [
       { name: "Foursquare", color: "white-text-gradient" },
       { name: "Volley", color: "blue-text-gradient" },
     ],
-    image: new URL('/smart-city-traveller.png', import.meta.env.BASE_URL).href,
+    image: "/smart-city-traveller.png",
     source_code_link: "https://github.com/Akshat394/Smart-City-Traveller",
   },
   {
