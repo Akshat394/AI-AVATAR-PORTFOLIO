@@ -315,6 +315,18 @@ const projects = [
     image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     source_code_link: "https://github.com/Akshat394/FlamEdge",
   },
+  {
+    name: "Crisp: AI-Powered Interview Assistant",
+    description: "Next-generation AI-powered interview assistant with modern UI, robust data persistence, and advanced AI features for real-world interview simulations.",
+    tags: [
+      { name: "React", color: "blue-text-gradient" },
+      { name: "Redux", color: "green-text-gradient" },
+      { name: "Ant Design", color: "pink-text-gradient" },
+      { name: "OpenAI", color: "white-text-gradient" },
+    ],
+    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    source_code_link: "https://github.com/Akshat394/CRISP-AI-iNTERVIEWER",
+  },
 ];
 
 export { services, technologies, experiences, testimonials, projects };
