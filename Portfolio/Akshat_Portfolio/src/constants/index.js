@@ -174,134 +174,6 @@ const testimonials = [
 
 const projects = [
   {
-    name: "Smart Retail 360",
-    description: "Next-generation supply chain orchestration platform with AI/ML, real-time analytics, IoT, and autonomous delivery. Features digital twin simulation, sustainability tracking, and omnichannel order management.",
-    tags: [
-      { name: "TypeScript", color: "blue-text-gradient" },
-      { name: "React", color: "green-text-gradient" },
-      { name: "Node.js", color: "pink-text-gradient" },
-      { name: "AI/ML", color: "white-text-gradient" },
-      { name: "IoT", color: "blue-text-gradient" },
-      { name: "Docker", color: "green-text-gradient" },
-    ],
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    source_code_link: "https://github.com/Akshat394/Smart-Retail-360",
-  },
-  {
-    name: "Deepfake Detector",
-    description: "Python-based dual-path video forgery detection system with ASCII preprocessing, temporal fusion, and advanced deep learning models. High accuracy on real-world datasets.",
-    tags: [
-      { name: "Python", color: "blue-text-gradient" },
-      { name: "TensorFlow", color: "green-text-gradient" },
-      { name: "OpenCV", color: "pink-text-gradient" },
-      { name: "Deep Learning", color: "white-text-gradient" },
-    ],
-    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    source_code_link: "https://github.com/Akshat394/DEEPFAKE-DETECTOR",
-  },
-  {
-    name: "Resume GPT",
-    description: "AI-powered resume builder and analyzer with OpenAI API, LangChain, and PDF export. Built with TypeScript, React, and Node.js for seamless user experience.",
-    tags: [
-      { name: "TypeScript", color: "blue-text-gradient" },
-      { name: "React", color: "green-text-gradient" },
-      { name: "Node.js", color: "pink-text-gradient" },
-      { name: "OpenAI", color: "white-text-gradient" },
-    ],
-    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    source_code_link: "https://github.com/Akshat394/resume-gpt",
-  },
-  {
-    name: "Fair Play App",
-    description: "React Native anti-doping education app with TensorFlow models, AWS-backed inference, and real-time quiz modules. Interactive and user-centric design.",
-    tags: [
-      { name: "React Native", color: "blue-text-gradient" },
-      { name: "TensorFlow", color: "green-text-gradient" },
-      { name: "AWS", color: "pink-text-gradient" },
-      { name: "Mobile", color: "white-text-gradient" },
-    ],
-    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    source_code_link: "https://github.com/Akshat394/FairPlayAPP",
-  },
-  {
-    name: "Studio AI",
-    description: "TypeScript web app for AI-driven content creation and design automation. Streamlines creative workflows with generative AI tools.",
-    tags: [
-      { name: "TypeScript", color: "blue-text-gradient" },
-      { name: "React", color: "green-text-gradient" },
-      { name: "AI", color: "pink-text-gradient" },
-    ],
-    image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    source_code_link: "https://github.com/Akshat394/StudioAI",
-  },
-  {
-    name: "Mercari Scraper",
-    description: "Python-based shopping assistant for Mercari Japan: real web scraping, intelligent product recommendations, and automated search.",
-    tags: [
-      { name: "Python", color: "blue-text-gradient" },
-      { name: "Web Scraping", color: "green-text-gradient" },
-      { name: "Automation", color: "pink-text-gradient" },
-    ],
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    source_code_link: "https://github.com/Akshat394/Mercari-japan-scraper-v2",
-  },
-  {
-    name: "PSIT Virtual Labs",
-    description: "HTML/CSS/JS virtual lab platform featuring interactive simulations for CS and EE curricula. Enhances learning with hands-on digital experiments.",
-    tags: [
-      { name: "HTML", color: "blue-text-gradient" },
-      { name: "CSS", color: "green-text-gradient" },
-      { name: "JavaScript", color: "pink-text-gradient" },
-      { name: "Education", color: "white-text-gradient" },
-    ],
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    source_code_link: "https://github.com/Akshat394/PSIT-VIRTUAL-LABS",
-  },
-  {
-    name: "Pulsesenti Sentiment Analysis Dashboard",
-    description: "TypeScript dashboard for live social media sentiment analysis, anomaly detection, and alerts. Real-time insights and visualization.",
-    tags: [
-      { name: "TypeScript", color: "blue-text-gradient" },
-      { name: "React", color: "green-text-gradient" },
-      { name: "Data Viz", color: "pink-text-gradient" },
-    ],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    source_code_link: "https://github.com/Akshat394/Pulsesenti_sentiment_analysis_dashboard",
-  },
-  {
-    name: "p2p-book-exchange-app",
-    description: "Next.js/React community book-sharing application with responsive UI and REST APIs. Secure, real-time, and user-friendly.",
-    tags: [
-      { name: "Next.js", color: "blue-text-gradient" },
-      { name: "React", color: "green-text-gradient" },
-      { name: "MongoDB", color: "pink-text-gradient" },
-    ],
-    image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2028&q=80",
-    source_code_link: "https://github.com/Akshat394/p2p-book-exchange-app",
-  },
-  {
-    name: "Facebook-Social-Analyzer",
-    description: "Python tool for Facebook social graph analysis, extracting insights and visualizing connections. Useful for research and analytics.",
-    tags: [
-      { name: "Python", color: "blue-text-gradient" },
-      { name: "Social Graph", color: "green-text-gradient" },
-      { name: "Analytics", color: "pink-text-gradient" },
-    ],
-    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    source_code_link: "https://github.com/Akshat394/Facebook-Social-Analyzer",
-  },
-  {
-    name: "Squid Game Doll Embedded Real-Time Motion Detection System",
-    description: "Arduino-based interactive replica of the Squid Game doll using servos, ultrasonic sensors, audio modules, and real-time control logic.",
-    tags: [
-      { name: "Arduino", color: "blue-text-gradient" },
-      { name: "Embedded", color: "green-text-gradient" },
-      { name: "Real-Time", color: "pink-text-gradient" },
-    ],
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-    source_code_link: "https://github.com/Akshat394/Squid-Game-Doll-Embedded-Real-Time-Motion-Detection-System",
-  },
-  {
     name: "FlamEdge",
     description: "Real-time Android edge detection pipeline powered by Camera2, JNI, OpenCV (C++), and OpenGL ES 2.0, plus a lightweight TypeScript web viewer for sharing processed frames.",
     tags: [
@@ -316,6 +188,55 @@ const projects = [
     source_code_link: "https://github.com/Akshat394/FlamEdge",
   },
   {
+    name: "Deepfake Detector",
+    description: "Python-based dual-path video forgery detection system with ASCII preprocessing, temporal fusion, and advanced deep learning models. High accuracy on real-world datasets.",
+    tags: [
+      { name: "Python", color: "blue-text-gradient" },
+      { name: "TensorFlow", color: "green-text-gradient" },
+      { name: "OpenCV", color: "pink-text-gradient" },
+      { name: "Deep Learning", color: "white-text-gradient" },
+    ],
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    source_code_link: "https://github.com/Akshat394/DEEPFAKE-DETECTOR",
+  },
+  {
+    name: "Smart Retail 360",
+    description: "Next-generation supply chain orchestration platform with AI/ML, real-time analytics, IoT, and autonomous delivery. Features digital twin simulation, sustainability tracking, and omnichannel order management.",
+    tags: [
+      { name: "TypeScript", color: "blue-text-gradient" },
+      { name: "React", color: "green-text-gradient" },
+      { name: "Node.js", color: "pink-text-gradient" },
+      { name: "AI/ML", color: "white-text-gradient" },
+      { name: "IoT", color: "blue-text-gradient" },
+      { name: "Docker", color: "green-text-gradient" },
+    ],
+    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    source_code_link: "https://github.com/Akshat394/Smart-Retail-360",
+  },
+  {
+    name: "Squid Game Doll Embedded Real-Time Motion Detection System",
+    description: "Arduino-based interactive replica of the Squid Game doll using servos, ultrasonic sensors, audio modules, and real-time control logic.",
+    tags: [
+      { name: "Arduino", color: "blue-text-gradient" },
+      { name: "Embedded", color: "green-text-gradient" },
+      { name: "Real-Time", color: "pink-text-gradient" },
+    ],
+    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    source_code_link: "https://github.com/Akshat394/Squid-Game-Doll-Embedded-Real-Time-Motion-Detection-System",
+  },
+  {
+    name: "Fair Play App",
+    description: "React Native anti-doping education app with TensorFlow models, AWS-backed inference, and real-time quiz modules. Interactive and user-centric design.",
+    tags: [
+      { name: "React Native", color: "blue-text-gradient" },
+      { name: "TensorFlow", color: "green-text-gradient" },
+      { name: "AWS", color: "pink-text-gradient" },
+      { name: "Mobile", color: "white-text-gradient" },
+    ],
+    image: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    source_code_link: "https://github.com/Akshat394/FairPlayAPP",
+  },
+  {
     name: "Crisp: AI-Powered Interview Assistant",
     description: "Next-generation AI-powered interview assistant with modern UI, robust data persistence, and advanced AI features for real-world interview simulations.",
     tags: [
@@ -328,6 +249,18 @@ const projects = [
     source_code_link: "https://github.com/Akshat394/CRISP-AI-iNTERVIEWER",
   },
   {
+    name: "Resume GPT",
+    description: "AI-powered resume builder and analyzer with OpenAI API, LangChain, and PDF export. Built with TypeScript, React, and Node.js for seamless user experience.",
+    tags: [
+      { name: "TypeScript", color: "blue-text-gradient" },
+      { name: "React", color: "green-text-gradient" },
+      { name: "Node.js", color: "pink-text-gradient" },
+      { name: "OpenAI", color: "white-text-gradient" },
+    ],
+    image: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    source_code_link: "https://github.com/Akshat394/resume-gpt",
+  },
+  {
     name: "Smart-City-Traveller",
     description: "AI-assisted city explorer using Foursquare Places API v3 and Google Maps. Zero-typing city autocomplete, curated categories, live discovery, and map visualization.",
     tags: [
@@ -337,8 +270,75 @@ const projects = [
       { name: "Foursquare", color: "white-text-gradient" },
       { name: "Volley", color: "blue-text-gradient" },
     ],
-    image: "https://images.unsplash.com/photo-1509099836639-18ba179a5040?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    image: "/smart-city-traveller.png",
     source_code_link: "https://github.com/Akshat394/Smart-City-Traveller",
+  },
+  {
+    name: "Pulsesenti Sentiment Analysis Dashboard",
+    description: "TypeScript dashboard for live social media sentiment analysis, anomaly detection, and alerts. Real-time insights and visualization.",
+    tags: [
+      { name: "TypeScript", color: "blue-text-gradient" },
+      { name: "React", color: "green-text-gradient" },
+      { name: "Data Viz", color: "pink-text-gradient" },
+    ],
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    source_code_link: "https://github.com/Akshat394/Pulsesenti_sentiment_analysis_dashboard",
+  },
+  {
+    name: "Studio AI",
+    description: "TypeScript web app for AI-driven content creation and design automation. Streamlines creative workflows with generative AI tools.",
+    tags: [
+      { name: "TypeScript", color: "blue-text-gradient" },
+      { name: "React", color: "green-text-gradient" },
+      { name: "AI", color: "pink-text-gradient" },
+    ],
+    image: "https://images.unsplash.com/photo-1626785774573-4b799315345d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    source_code_link: "https://github.com/Akshat394/StudioAI",
+  },
+  {
+    name: "Facebook-Social-Analyzer",
+    description: "Python tool for Facebook social graph analysis, extracting insights and visualizing connections. Useful for research and analytics.",
+    tags: [
+      { name: "Python", color: "blue-text-gradient" },
+      { name: "Social Graph", color: "green-text-gradient" },
+      { name: "Analytics", color: "pink-text-gradient" },
+    ],
+    image: "https://images.unsplash.com/photo-1611224923853-80b023f02d71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    source_code_link: "https://github.com/Akshat394/Facebook-Social-Analyzer",
+  },
+  {
+    name: "Mercari Scraper",
+    description: "Python-based shopping assistant for Mercari Japan: real web scraping, intelligent product recommendations, and automated search.",
+    tags: [
+      { name: "Python", color: "blue-text-gradient" },
+      { name: "Web Scraping", color: "green-text-gradient" },
+      { name: "Automation", color: "pink-text-gradient" },
+    ],
+    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    source_code_link: "https://github.com/Akshat394/Mercari-japan-scraper-v2",
+  },
+  {
+    name: "p2p-book-exchange-app",
+    description: "Next.js/React community book-sharing application with responsive UI and REST APIs. Secure, real-time, and user-friendly.",
+    tags: [
+      { name: "Next.js", color: "blue-text-gradient" },
+      { name: "React", color: "green-text-gradient" },
+      { name: "MongoDB", color: "pink-text-gradient" },
+    ],
+    image: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2028&q=80",
+    source_code_link: "https://github.com/Akshat394/p2p-book-exchange-app",
+  },
+  {
+    name: "PSIT Virtual Labs",
+    description: "HTML/CSS/JS virtual lab platform featuring interactive simulations for CS and EE curricula. Enhances learning with hands-on digital experiments.",
+    tags: [
+      { name: "HTML", color: "blue-text-gradient" },
+      { name: "CSS", color: "green-text-gradient" },
+      { name: "JavaScript", color: "pink-text-gradient" },
+      { name: "Education", color: "white-text-gradient" },
+    ],
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    source_code_link: "https://github.com/Akshat394/PSIT-VIRTUAL-LABS",
   },
 ];
 

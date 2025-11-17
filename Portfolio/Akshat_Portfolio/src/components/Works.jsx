@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Tilt } from "react-tilt";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -20,6 +20,8 @@ const ProjectCard = ({
   source_code_link,
 }) => {
   const cardRef = useRef(null);
+  const [imgSrc, setImgSrc] = useState(image);
+  const fallbackImg = "https://images.unsplash.com/photo-1509099836639-18ba179a5040?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80";
 
   useEffect(() => {
     const el = cardRef.current;
@@ -57,7 +59,8 @@ const ProjectCard = ({
       >
         <div className="relative w-full h-[230px]">
           <img
-            src={image}
+            src={imgSrc}
+            onError={() => setImgSrc(fallbackImg)}
             alt="project_image"
             className="w-full h-full object-cover object-left rounded-2xl"
           />
