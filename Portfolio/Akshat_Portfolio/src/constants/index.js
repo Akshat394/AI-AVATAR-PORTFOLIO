@@ -301,6 +301,20 @@ const projects = [
     image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
     source_code_link: "https://github.com/Akshat394/Squid-Game-Doll-Embedded-Real-Time-Motion-Detection-System",
   },
+  {
+    name: "FlamEdge",
+    description: "Real-time Android edge detection pipeline powered by Camera2, JNI, OpenCV (C++), and OpenGL ES 2.0, plus a lightweight TypeScript web viewer for sharing processed frames.",
+    tags: [
+      { name: "Android", color: "blue-text-gradient" },
+      { name: "OpenCV", color: "green-text-gradient" },
+      { name: "C++", color: "pink-text-gradient" },
+      { name: "OpenGL ES", color: "white-text-gradient" },
+      { name: "JNI", color: "blue-text-gradient" },
+      { name: "TypeScript", color: "green-text-gradient" },
+    ],
+    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    source_code_link: "https://github.com/Akshat394/FlamEdge",
+  },
 ];
 
 export { services, technologies, experiences, testimonials, projects };
