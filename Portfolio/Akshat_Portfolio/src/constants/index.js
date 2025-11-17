@@ -327,6 +327,19 @@ const projects = [
     image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     source_code_link: "https://github.com/Akshat394/CRISP-AI-iNTERVIEWER",
   },
+  {
+    name: "Smart-City-Traveller",
+    description: "AI-assisted city explorer using Foursquare Places API v3 and Google Maps. Zero-typing city autocomplete, curated categories, live discovery, and map visualization.",
+    tags: [
+      { name: "Android", color: "blue-text-gradient" },
+      { name: "Java", color: "green-text-gradient" },
+      { name: "Google Maps", color: "pink-text-gradient" },
+      { name: "Foursquare", color: "white-text-gradient" },
+      { name: "Volley", color: "blue-text-gradient" },
+    ],
+    image: "https://images.unsplash.com/photo-1509099836639-18ba179a5040?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
+    source_code_link: "https://github.com/Akshat394/Smart-City-Traveller",
+  },
 ];
 
 export { services, technologies, experiences, testimonials, projects };
