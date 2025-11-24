@@ -171,4 +171,4 @@ const Tech = () => (
   </section>
 );
 
-export default SectionWrapper(Tech, "");
+export default SectionWrapper(Tech, "codinghandles");
