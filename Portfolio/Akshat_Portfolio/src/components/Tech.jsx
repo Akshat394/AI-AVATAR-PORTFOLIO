@@ -140,6 +140,7 @@ const Tech = () => (
       .neon-title { text-shadow: 0 0 14px rgba(0,255,255,0.35), 0 0 34px rgba(255,0,255,0.25); }
     `}</style>
     <div className="text-center mb-10">
+      <span id="skills"></span>
       <h2 className="neon-title text-4xl md:text-5xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-fuchsia-400 to-purple-400">
         Skills
       </h2>
@@ -150,6 +151,7 @@ const Tech = () => (
       ))}
     </div>
     <div className="mt-16">
+      <span id="codinghandles"></span>
       <h2 className="text-3xl font-bold text-center mb-6">Coding Handles</h2>
       <div className="flex flex-row justify-center items-center gap-10">
         <a href="https://leetcode.com/u/cannister2k22/" target="_blank" rel="noopener noreferrer" title="LeetCode">
@@ -171,4 +173,4 @@ const Tech = () => (
   </section>
 );
 
-export default SectionWrapper(Tech, "codinghandles");
+export default SectionWrapper(Tech, "skills");
