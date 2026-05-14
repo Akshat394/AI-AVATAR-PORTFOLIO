@@ -117,21 +117,19 @@ const technologies = [
 
 const experiences = [
   {
-    {
-  title: "Software Engineer (R&D) Intern",
-  company_name: "Flam",
-  icon: backend,
-  iconBg: "#383E56",
-  date: "Jan 2026 - Present",
-  points: [
-    "Working as part of Flam’s R&D team on next-generation app-less AR and mixed reality infrastructure for immersive advertising and interactive experiences.",
-    "Prototyped computer vision and AR/XR concepts across mobile and web platforms for immersive interactive systems.",
-    "Implemented performance-critical C++ components for vision and graphics pipelines with focus on low-latency real-time processing.",
-    "Experimented with geometry, linear algebra, and matrix-based transformations for scalable AR and mixed reality workflows.",
-    "Collaborated with engineers to validate algorithms, test prototypes, and integrate solutions into SDK-ready production workflows.",
-    "Explored cross-platform computer vision and rendering techniques across Android, iOS, and web environments under strict performance constraints."
-  ],
-},
+    title: "Software Engineer (R&D) Intern",
+    company_name: "Flam",
+    icon: backend,
+    iconBg: "#383E56",
+    date: "Jan 2026 - Present",
+    points: [
+      "Working as part of Flam’s R&D team on next-generation app-less AR and mixed reality infrastructure for immersive advertising and interactive experiences.",
+      "Prototyped computer vision and AR/XR concepts across mobile and web platforms for immersive interactive systems.",
+      "Implemented performance-critical C++ components for vision and graphics pipelines with focus on low-latency real-time processing.",
+      "Experimented with geometry, linear algebra, and matrix-based transformations for scalable AR and mixed reality workflows.",
+      "Collaborated with engineers to validate algorithms, test prototypes, and integrate solutions into SDK-ready production workflows.",
+      "Explored cross-platform computer vision and rendering techniques across Android, iOS, and web environments under strict performance constraints."
+    ],
   },
   {
     title: "RLHF Code Specialist (Freelance)",
