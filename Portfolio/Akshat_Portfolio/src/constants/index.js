@@ -117,16 +117,19 @@ const technologies = [
 
 const experiences = [
   {
-    title: "Software Developer Intern",
-    company_name: "The Vibe Coder (Startup)",
+    title: "Software Engineer (R&D) Intern",
+    company_name: "Flam",
     icon: backend,
     iconBg: "#383E56",
-    date: "2025-Present",
+    date: "Jan 2026 - Present",
     points: [
-      "Developed Facebook Social Analyzer: Engineered a Python tool for analyzing and visualizing Facebook social graphs, providing actionable insights for research and analytics.",
-      "Built Studio AI: Created a TypeScript web app for AI-driven content creation and design automation, streamlining creative workflows with generative AI tools.",
-      "Implemented Mercari Scraper: Developed a Python-based shopping assistant for Mercari Japan, featuring intelligent product recommendations and automated web scraping.",
-      "Collaborated with cross-functional teams to deliver robust, production-ready solutions and contributed to code reviews and documentation."
+      "Working as part of Flam’s R&D team on next-generation app-less AR and mixed reality infrastructure for immersive advertising and interactive experiences.",
+      "Prototyped computer vision and AR/XR concepts across mobile and web platforms for immersive interactive systems.",
+      "Implemented performance-critical C++ components for vision and graphics pipelines with focus on low-latency real-time processing.",
+      "Experimented with geometry, linear algebra, and matrix-based transformations for scalable AR and mixed reality workflows.",
+      "Collaborated with engineers to validate algorithms, test prototypes, and integrate solutions into SDK-ready production workflows.",
+      "Explored cross-platform computer vision and rendering techniques across Android, iOS, and web environments under strict performance constraints."
+]
     ],
   },
   {
